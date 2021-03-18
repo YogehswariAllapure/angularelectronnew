@@ -1,13 +1,30 @@
 {
   "name": "angularelectronnew",
-  "version": "0.0.0",
+  "version": "1.1.0",
+  "description": "The Electron App deveoped for Ubuntu",
+  "main": "main.js",
+  "author": "Yogeshwari",
+  "license": "Apache-2.0",
+  "build": {
+    "appId": "com.example.angularelectronnew",
+    "productName": "New App",
+    "linux": {
+      "category": "Utility",
+      "icon": "/assets/logo.png",
+      "packagecategory": "utility",
+      "target": [ "deb" ],
+      "synopsis": "The Electron App deveoped for Ubuntu"
+    }
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron-build": "ng build --prod && npm run electron .",
+    "start:electron": "ng build --base-href ./ && electron ."
   },
   "private": true,
   "dependencies": {
